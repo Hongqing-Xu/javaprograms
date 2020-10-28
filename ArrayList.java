@@ -32,8 +32,8 @@ public class ArrayList implements List {
 	public Object get(int i) {
 		
 		if(i<0||i>=size){//i<0||i>size
-			//throw new RuntimeException("æ•°ç»„ç´¢å¼•è¶Šç•Œå¼‚å¸¸:"+i);
-			throw new MyArrayIndexOutOfBoundsException("æ•°ç»„ç´¢å¼•è¶Šç•Œå¼‚å¸¸:"+i);
+			//throw new RuntimeException("Êı×éË÷ÒıÔ½½çÒì³£:"+i);
+			throw new MyArrayIndexOutOfBoundsException("Êı×éË÷ÒıÔ½½çÒì³£:"+i);
 		}
 		
 		return elementData[i];
@@ -60,7 +60,7 @@ public class ArrayList implements List {
 	public void add(int i, Object e) {
 	
 		if(i<0||i>size){
-			throw new MyArrayIndexOutOfBoundsException("æ•°ç»„ç´¢å¼•è¶Šç•Œå¼‚å¸¸:"+i);
+			throw new MyArrayIndexOutOfBoundsException("Êı×éË÷ÒıÔ½½çÒì³£:"+i);
 		}
 		if(size==elementData.length){
             grow();
@@ -68,9 +68,9 @@ public class ArrayList implements List {
 	for(int j=size;j>i;j--){
 		elementData[j]= elementData[j-1];
 	}
-	  //ç»™æ•°æ®èµ‹å€¼
+	  //¸øÊı¾İ¸³Öµ
 	  elementData[i] = e;
-	  //å…ƒç´ ä¸ªæ•°+1
+	  //ÔªËØ¸öÊı+1
 	  size++;
 	  //elementData[size++] = e;
 	  //System.out.println("length="+elementData.length); 
@@ -83,9 +83,9 @@ public class ArrayList implements List {
             //   grow();
 	//	}
 		
-		//ç»™æ•°æ®èµ‹å€¼
+		//¸øÊı¾İ¸³Öµ
 	//	elementData[size] = e;
-		//å…ƒç´ ä¸ªæ•°+1
+		//ÔªËØ¸öÊı+1
 	//	size++;
 		//elementData[size++] = e;
 		//System.out.println("length="+elementData.length);
